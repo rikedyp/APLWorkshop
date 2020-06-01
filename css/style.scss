@@ -1,7 +1,10 @@
+---
+---
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap&text=%E2%86%90|%E2%86%92');
 
-@font-face {font-family: "APL385";src: url("/assets/Apl385.ttf");}
+@font-face {font-family: "APL385";src: url("{{ site.baseurl}}/assets/Apl385.ttf");}
 
 @media only screen and (max-width: 600px) {
     #navbar > h1 {
