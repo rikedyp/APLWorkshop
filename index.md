@@ -9,7 +9,7 @@ This course consists of a series of short videos, interleaved with problem sets.
 
 ### Getting Started
 
-You will need access to [an APL interpreter](https://aplwiki.com/wiki/Running_APL) and the ability to [type APL symbols](https://aplwiki.com/wiki/Typing_glyphs). Then you are ready to [Get Started](/course/1).
+You will need access to [an APL interpreter](https://aplwiki.com/wiki/Running_APL) and the ability to [type APL symbols](https://aplwiki.com/wiki/Typing_glyphs). Then you are ready to [Get Started]({{ site.baseurl }}/course/1).
 
 ### Overview
 
