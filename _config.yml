@@ -1,9 +1,1 @@
 title: Learn Dyalog APL
-lsi: false
-safe: true
-incremental: false
-highlighter: rouge
-plugins:
-  - course_num
-gist:
-  noscript: false
