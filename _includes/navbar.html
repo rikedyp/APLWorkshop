@@ -1,5 +1,5 @@
 <div id="navbar">
-	<a id="back" href="{{ site.baseurl }}/{{ page.back }}">← Back</a>
+	<a id="back" href="{{ site.baseurl }}{{ page.back }}">← Back</a>
 	<h1 id="navtitle">
 {% assign numcheck = page.name | remove: ".md" | plus: 0 %}
 {% if numcheck == 0 %}
@@ -8,5 +8,5 @@
 {{ page.name | remove: ".md"}}: {{ page.title }}
 {% endif %}
 	</h1>
-	<a id="next" href="{{ site.baseurl }}/{{ page.next }}">Next →</a>
+	<a id="next" href="{{ site.baseurl }}{{ page.next }}">Next →</a>
 </div>
