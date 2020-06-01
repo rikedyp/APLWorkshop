@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap&text=%E2%86%90|%E2%86%92');
+
+@font-face {font-family: "APL385";src: url("/assets/Apl385.ttf");}
+
+@media only screen and (max-width: 600px) {
+    #navbar > h1 {
+        display: none;
+    }
+}
+
+a {
+    width: 5em;
+    background: #eae9f3;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.7em;
+    color: black;
+    padding: 0.3em;
+    z-index: 2;   
+}
+a:hover {background: #928abd;color: white;}
+
+body {
+    background: #fffff3;    
+    font-family: 'Inter', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 2em;
+    margin-bottom: 5em;
+}
+
+.course-content {
+	top: 2.5em;
+	position: relative;
+	margin: 0 1vw;
+}
+
+h2, h3, h4 {left: 3vw;}
+#navbar {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: fixed;
+    top: 0;
+    height: 3em;
+    background: #fffff3;
+    width: 100vw;  
+    z-index: 1;
+}
+
+#navbar > h1 {
+    font-size: 1.5em; 
+    top: -0.5em;
+    text-align: center;
+    width: 100vw;
+    position: fixed;
+}
+
+#back, #next {top: 0.2em;position: fixed;}
+#back {left: 5vw;}
+#next {right: 5vw;}
+
+ol ol {list-style-type: lower-alpha;}
+ol ol ol {list-style-type: lower-roman;}
+table {border-collapse: collapse;}
+table tbody tr td {
+    border: solid;
+    padding: 0.3em;
+}
+
+pre, code {    
+    background: #3C4F76;
+    color: white;
+    padding: 0.3em 0.7em 0.3em 0.7em;
+    overflow: auto;    
+    border-radius: 0.7em;
+    font-family: "APL385";
+    line-height: 1.2em;
+}
+
+pre > * {padding: 0;}
+pre > * > * {padding: 0;}
+pre {margin: 0 3vw;}
+
+.language-APL {font-family: APL385;}
