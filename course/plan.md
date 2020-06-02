@@ -1,7 +1,7 @@
 ---
 layout: workshop
 title: Course Outline
-back: /course/4
+back: /course/day1/4
 next: /course/todo
 ---
 
