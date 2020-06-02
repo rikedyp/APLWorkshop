@@ -7,28 +7,53 @@ next: /
 
 # To do
 
-### History of APL (link to APL wiki & HOPL paper?)
+## History of APL (link to APL wiki & HOPL paper?)
 - ppt 1
     - Type ball: slide 37
-### Motivation
+## Motivation
 - Notation as a tool of thought
 - Comparison to TMN (link to APL wiki)   
 
-### APL Language    
+## APL Language    
 - Syntax overview
-    array | fn arg | larg fn rarg | fn op | lfn op rfn | array[indices]        
+    ~~array | fn arg | larg fn rarg | fn op | lfn op rfn | array[indices]~~
+    - ~~Basic arithmetic~~
     - Scalar vs. Non-scalar functions
     - ~~Order of execution~~
+    - ~~Singleton extension~~
     - Chars and Nums
-        - Quotes `''`, double quotes `''''`
+        - ~~Quotes `''`~~ double quotes `''''`
         - Real, Complex, Engineering        
 - Primitives
-    - ~~`+ × - ÷ |`~~
+    - Mathematics
+        - `⌊ * ⍟ ○ ! ⊥ ⊤ ? ⌹`
+        - ~~`+ - × ÷ ⌈ |`~~
+    - Logic and Comparison
+        - `∧ ∨ ⍲ ⍱ < ≤ ≥ > = ≠ ≡ ≢`
+        - ~~`=`~~
+    - Structural 
+        - `⍪ ⌽ ⍉ ⊖ ↑ ↓ ⊂ ⊆ ≡ ∊`
+        - ~~`≢ , ⍴`~~
+    - Selection 
+        - `⌷ ⊃ / ⌿ \ ⍀ ⊣ ⊢ @`
+    - Set functions 
+        - `∪ ∩ ∊ ~ ⍳`
+    - Search and Sort 
+        - `⍳ ⍸ ∊ ⍷ ⍋ ⍒ ⌸`
+    - Miscellaneous
+        - `¯ ' ← ⍬ ⍎ ⍕ ⋄ ⍝ ∇ ⍺ ⍵ ⎕ [] {} ⍠ ⌶`
+    - Loops
+        - `¨ ⍣ ⍤ ⌺`
+    - Function composition
+        - `∘ ⍤ ⍥ ⍨ ∘.f f.g`
+    
     - `⌹ * ⍟ !`
     - ~~Reduce `/ ⌿`~~ Scan `\ ⍀`
     - Replicate, Expand
         - Most commonly, Compress
-    - `⌈ ⌊ ⍋ ⍒ < ≤ = ≥ > ≠ ≡ ≢`
+    - `⌈ ⍋ ⍒`
+    - ~~`≢ ⌊`~~
+    - Where ~~`⍸`~~
     - `∊ ∪ ∩ ~ ⍷`
         - Link to Progressive-index-of webinar
     - `⍝ ⎕ ⍞`
@@ -45,22 +70,21 @@ next: /
 - Selecting from Arrays
     - Link to Webinar
     - Index-of `⍳`
-    - `[]` `⌷` 
-    - High rank selection
-        - The shape of the result
-        - `⌷[]` vs `⌷⍤`        
+    - ~~`[]`~~ `⌷` 
+    - ~~High rank selection~~
+        - ~~The shape of the result~~
+        - ~~`⌷[]` vs `⌷⍤`~~
 - Products
-    - ∘.f
-    - f.g
+    - ~~`∘.f`~~
+    - ~~f.g~~
 - Naming / Assignment
-    - (strand assignment)←v1 v2
-    - Selective assignment 
-    - Indexed assignment 
-        - When is `(C[n]←C[n]+1) ≢ C[n]+←1`?
-    - Modified assignment
-    - `a_ó∆ø1⍙ `
-    - Names do not begin with a `⎕D` digit
-    - Cannot change var to fn/op (or vice versa) on reassignment
+    - ~~(strand assignment)←v1 v2~~
+    - ~~Selective assignment~~
+    - ~~Indexed assignment~~
+        - ~~When is `(C[n]←C[n]+1) ≢ C[n]+←1`?~~
+    - ~~Modified assignment~~
+    - ~~Names do not begin with a `⎕D` digit~~
+    - ~~Cannot change var to fn/op (or vice versa) on reassignment~~
     
         ```APL
               foo←{⍺+⍵}
@@ -70,19 +94,24 @@ next: /
               ∧
         ```
 - Control Structures
-    - ppt 4, slide 89
+    - ~~ppt 4, slide 89~~
+
+- Array model
+    - ~~Rank vs Axis~~
+    - ~~Nested arrays~~
+    - ~~Floating scalars~~
 
 - Nested arrays
     ppt 5
     - Simple scalar
-    - Simple array 
-    - Nested array 
-    - Stranding
+    - ~~Simple array~~
+    - ~~Nested array~~
+    - ~~Stranding~~
     - Detph `≡`
     - Floating scalars
     - Prototypes
     - `⊃` pick
-    - `]box on`
+    - ~~`]box on`~~
         - `]disp`, `]display`
         
 - Operators
@@ -98,12 +127,50 @@ next: /
     - `⍕ ⎕FMT`
     
 - Input/Output
-    - `⎕ ⍞ ⎕VFI`
-    - `{//⎕VFI⍵}⍞`
+    - ~~`⎕ ⍞ ⎕VFI`~~
+    - ~~`{//⎕VFI⍵}`~~
 
 - Namespaces & Other Objects
-    - Namespaces 
+    - ~~Namespaces~~
         ppt 6, slide 39...
+
+## Phrases and Idioms
+
+#### The Inner Product
+
+```APL
+      f.g
+      ∧.∨
+      ∧.=
+      ⎕←names←4 5⍴'HarryDave SteveFaye '
+Harry
+Dave 
+Steve
+Faye 
+      names∧.='Steve'
+0 0 1 0      
+```
+
+### User-defined functions & operators
+- Primitive function 
+- Scalar function 
+- Structural function 
+- Monadic
+- Dyadic
+- Niladic
+- Dfns
+    - ~~`{⍺⍵}`~~
+    - Guards
+    - Recursion
+- Dops
+- Tradfns
+    - Local names
+    - Control structures
+    - Session
+- Tradops
+- Multi-line functions
+- Tacit (point-free) programming
+- `⎕FIX` `⎕FX`
 
 ### Using the session 
 - The workspace
@@ -123,6 +190,7 @@ next: /
         - The rest on the back / links to docs?
     - Tradfn ⎕NC exercise
         - create ambivalent tradfn using 0=⎕NC
+    - `⎕SI ⎕XSI`
 
 - Session config
     ppt4, slide 38
@@ -147,10 +215,12 @@ next: /
         
         
     - UCMDs 
-        - `]box -trains=tree`
+        - `]box -trains=tree -fns=on`
         - `]rows -fold=3`
         - `]chart` `]plot`
         - Where to find more?
+        
+     
 
 ### File Handling
 ppt 7, slide 15
@@ -186,6 +256,10 @@ ppt 7 slide 35...
     - `:Goto`
     - `:Labels`
     - `→⎕LC`
+- Valid names
+    - `a_ó∆ø⍙`
+    - Names cannot begin with digits
+    - Capital underscore in Classic code
 
 ### Toolbelt
 
@@ -297,26 +371,6 @@ ppt 7 slide 35...
     - Data files can be used across 32/64 bit, Unicode vs Classic, Big- vs Little-Endian
         - Even if transmitted via TCP sockets
     
-### User-defined functions & operators
-- Primitive function 
-- Scalar function 
-- Structural function 
-- Monadic
-- Dyadic
-- Niladic
-- Dfns
-    - Guards
-    - Recursion
-- Dops
-- Tradfns
-    - Local names
-    - Control structures
-    - Session
-- Tradops
-- Multi-line functions
-- Tacit (point-free) programming
-- `⎕FIX` `⎕FX`
-
 ### Where to find out more
 - F1 / web help
 - Google

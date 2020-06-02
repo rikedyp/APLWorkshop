@@ -23,3 +23,13 @@ Learning APL can be more like learning a natural language
 - Frequent input and exposure to model
 
 Not every word or construct needs to be explicitly introduced before use or reference. Observing the use of words which one doesn't understand is normal at the beginning of learning a language. Often seeing the result in context is enough to at least know "what is going on". 
+
+(12 3 4⍴(3×4)/1 10 100 1000)×a
+(12⍴1 10 100 1000)×⍤0 2⊢a
+
+> 	Rho, rho, rho of X
+Always equals 1
+Rho is dimension, rho rho rank.
+APL is fun!
+
+Richard M. Stallman, 1969
