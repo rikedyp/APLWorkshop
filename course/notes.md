@@ -1,5 +1,13 @@
 # Notes
 
+### Style
+
+`code`
+
+[internal link](#)
+
+**new jargon**
+
 ### End of day 1
 If you've made it this far, you'll probably want to install Dyalog. The APL interpreter is free for non-commercial use. 
 
@@ -33,3 +41,13 @@ Rho is dimension, rho rho rank.
 APL is fun!
 
 Richard M. Stallman, 1969
+
+### Assessment
+- Written test
+    Answer questions and evaluate expressions without an interpreter
+- Show-and-tell
+    Stand up and teach something to the class
+- Problem solving
+    Write APL which solves a problem
+- Quiz
+    Kahoot quiz probably
