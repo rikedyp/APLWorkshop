@@ -94,6 +94,9 @@ https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher#Description
 ### Grille Cypher
 `⍵[⍸⍵=' ']`
 
+### Array analysis
+`'chr' 'num' 'ref'[Type¨ myarray]`
+
 ### Numerical Integration
 Implement trapezoid and Simpsons integration with user-defined operators
 
