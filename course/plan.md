@@ -14,7 +14,7 @@ Introduction to APL and Problem Solving
 Estimated time: `? hrs`
 
 ## First Steps
-Estimated time: `30 mins`
+Estimated time: `40 mins`
 
 #### Learning Objectives
 
@@ -37,7 +37,7 @@ Primitives & Basic constructs:
 ```
    
 ## Dfns and Assignment
-Estimated time: `20 mins`
+Estimated time: `40 mins`
 
 #### To do
 - Where without ⍸ problem
@@ -60,7 +60,7 @@ Primitives & Basic constructs:
 ```
 
 ## Selecting from Lists
-Estimated time: `25 mins`
+Estimated time: `20 mins`
 
 #### Learning Objectives
 1. Understand that logical statements can be expressed as selections from arrays
@@ -95,7 +95,7 @@ Estimated time: `25 mins`
 ```
 
 ## Multidimensional Arrays
-Estimated time: `20 mins`
+Estimated time: `30 mins`
 
 #### Learning Objectives
 1. Understand that all arrays are described as a shape and a list of values
@@ -117,7 +117,7 @@ Estimated time: `20 mins`
 ```
 
 ## The Array Model
-Estimated time: `60 mins`
+Estimated time: `40 mins`
 
 #### Learning Objectives
 1. Know the terms major cell, k-cell, axis, dimension, tally and rank in terms of array shape
