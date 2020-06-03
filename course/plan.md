@@ -11,16 +11,22 @@ next: /course/todo
 
 Introduction to APL and Problem Solving
 
-Estimated time: `5 hrs`
+Estimated time: `6 hrs`
 
 ## First Steps
+Estimated time: `35 mins`
+
 #### Learning Objectives
-- LO1: Be able to type APL symbols
-- LO2: Understand the meaning of monadic and dyadic function application
-- LO3: Understand the order of execution and be able to change it with parentheses
+
+1. Use an APL interpreter
+1. Understand the meaning of monadic and dyadic function application  
+1. Understand the order of execution   
 
 #### Success Criteria
-- SC1: Students can solve simple arithmetic problems using reductions
+Students can:
+1. Type APL symbols  
+1. Solve simple arithmetic problems using reductions
+1. Change the order of execution using parentheses
 
 Primitives & Basic constructs:
 
@@ -29,24 +35,21 @@ Primitives & Basic constructs:
       +/⍳N
       (a-b)-c
 ```
-
-- Typing APL
-- Basic arithmetic
-- Singleton extension
-- Reduction
-- Order of execution   
    
 ## Dfns and Assignment
+Estimated time: `15 mins`
+
 #### To do
 - Where without ⍸ problem
+- Compression
 
 #### Learning Objectives
-- LO1: Know what dfns are and what they look like
-- LO2: Know how to assign names 
+1. Know what dfns are and what they look like
+1. Know how to assign names 
 
 #### Success Critera
-- SC1: Write one-line anonymous dfns to solve simple problems
-- SC2: Use in-line assignment to solve simple problems
+1. Write one-line dfns to solve simple problems
+1. Use in-line assignment to solve simple problems
 
 Primitives & Basic constructs:
 
@@ -55,54 +58,65 @@ Primitives & Basic constructs:
       {⍺⍵}
       name ← value      
 ```
-- Dfns syntax
-- Name assignment 
-    - In-line assignment  
 
 ## Selecting from Lists
+Estimated time: `25 mins`
+
+#### Learning Objectives
+1. Understand that logical statements can be expressed as selections from arrays
+1. Know how to use scalar logic functions
+1. Know how to select from vectors using compress and square brackets
+
+#### Success Criteria
+1. Students can solve problems using selection
+
 New constructs:
 
 ```APL
       [] ⍸ 
       {⍵/⍳≢⍵}
 ```
-- Simple indexing into lists 
 
 ## The Outer Product
+Estimated time: `25 mins`
+
 #### Learning Objectives
-- LO1: Understand the outer product `⍺ ∘.f ⍵` applies `f` dyadically between all combinations of elements from `⍺` and `⍵`.
+1. Understand that the outer product `⍺ ∘.f ⍵` can be used to compute tables
 
 #### Success Criteria
-- SO1: Produce tables using `∘.f`
-- SO2: Solve some categorisation problems
+1. Produce tables using `∘.f`
+1. Solve some categorisation problems
 
 #### New constructs
 
 ```APL
-      ∘.f , ⌿      
+      ∘.f , ⌿     
+      < ≤ ≥ > 
 ```
-
-- Problem solving practise
 
 ## Array Basics 
 #### Learning Objectives
-- LO1: Understand that all arrays are described as a shape and a list of values
-- LO2: Know how to use the shape and reshape functions `⍴`
-- LO3: Understand that the shape of an indexing expression is determined by the shape of the array of indices
-- LO4: Understand empty axes and empty arrays
-- LO5: Understand empty array jokes
+1. Understand that all arrays are described as a shape and a list of values
+1. Know how to use the shape and reshape functions `⍴`
+1. Know that `≢⍴` is the rank of an array
+1. Understand that the shape of an indexing expression is determined by the shape of the array of indices
+1. Understand empty axes and empty arrays
+1. Understand empty array jokes
 
 #### Success Criteria
-- SC1: Students can determine the shape of the result of an outer product or indexing expression without evaluating the expression
-- SC2: Students can solve data summary problems using `⍴` and simple indexing
+1. Students can determine the shape of the result of an outer product or indexing expression without evaluating the expression
+1. Students can solve problems using `⍴` and simple indexing
 
 ```APL
       ⍴ 
-      'vector'[I]
-      'vector'[n m⍴I]
+      array[I]
+      array[n m⍴I]
+      array[;;]
 ```
 
 ## Workspace Basics
+Estimated time: `15 mins`
+
 #### Learning Objectives
 - LO1: Understand that a workspace is a collection of APL names
     Students can:
@@ -170,7 +184,7 @@ Primitives & Basic constructs:
 ```APL
       ⍴ 
       (⍴,≢)
-      ⍳ ⌷[] ⌷⍤ [;;]      
+      ⍳ ⌷[] ⌷⍤      
 ```
 
 - Cells & Axes
@@ -249,6 +263,10 @@ Primitives, Commands & Basic constructs:
 
 ```APL
 ⎕DR ⎕FR ⎕CT ⎕ML 
+
+⍝ Array analysis
+'char' 'ref' 'num'[(326∘= + (~2|⊢))⎕DR¨mat]
+
 ```
 
 ## Extra Assignment
@@ -269,12 +287,16 @@ Primitives, Commands & Basic constructs:
           ∧
     ```
 
+- Sparse Matrices
+
 ## User Defined Functions
 - Dfns
 - Tradfns
 - Tacit
 
 ## Control Flow
+https://nbviewer.jupyter.org/github/rikedyp/LearnAPL/blob/master/Tutorials/MarkingTests.ipynb
+
 Primitives, Commands & Basic constructs:
 
 ```APL
