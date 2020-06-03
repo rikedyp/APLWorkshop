@@ -11,10 +11,10 @@ next: /course/todo
 
 Introduction to APL and Problem Solving
 
-Estimated time: `6 hrs`
+Estimated time: `? hrs`
 
 ## First Steps
-Estimated time: `35 mins`
+Estimated time: `30 mins`
 
 #### Learning Objectives
 
@@ -37,7 +37,7 @@ Primitives & Basic constructs:
 ```
    
 ## Dfns and Assignment
-Estimated time: `15 mins`
+Estimated time: `20 mins`
 
 #### To do
 - Where without ⍸ problem
@@ -94,7 +94,9 @@ Estimated time: `25 mins`
       < ≤ ≥ > 
 ```
 
-## Array Basics 
+## Multidimensional Arrays
+Estimated time: `20 mins`
+
 #### Learning Objectives
 1. Understand that all arrays are described as a shape and a list of values
 1. Know how to use the shape and reshape functions `⍴`
@@ -114,24 +116,42 @@ Estimated time: `25 mins`
       array[;;]
 ```
 
-## Workspace Basics
-Estimated time: `15 mins`
+## The Array Model
+Estimated time: `60 mins`
 
 #### Learning Objectives
-- LO1: Understand that a workspace is a collection of APL names
-    Students can:
-    - Name a workspace
-    - Save a workspace
-    - Load a workspace
-    - Copy names from a workspace
-- LO2: Understand the a namespace is a collection of APL names which resides in a workspace
-    Students can:
-    - Create a named namespace
-    - Copy functions into a namespace using NS.⎕CY
-    - Erase a namespace or names from a namespace
-- LO3: Understand that non-object names are pass-by-value and that object names are pass-by-reference
+1. Know the terms major cell, k-cell, axis, dimension, tally and rank in terms of array shape
+1. Know the difference between simple and nested arrays
+1. Know how to use each `¨` to loop over elements 
+1. Know how to use rank `⍤` to loop over k-cells
 
-Primitives, Commands & Basic constructs:
+#### Success Criteria
+
+#### New constructs
+
+```APL
+      ⍤ ⌷ ⊂ []
+```
+
+## Workspace Basics
+Estimated time: `20 mins`
+
+#### Learning Objectives
+1. Understand that a workspace is a collection of APL names
+1. Understand the a namespace is a collection of APL names which resides in a workspace
+1. Know how to use dot notation to access names inside namespaces
+1. Understand that non-object names are pass-by-value and that object names are pass-by-reference
+
+### Success Criteria
+Students can
+- Name a workspace
+- Save a workspace
+- Load a workspace
+- Copy names from a workspace
+- Create a named namespace
+- Copy functions into a namespace using NS.⎕CY
+
+#### New constructs:
 
 ```APL
       )CLEAR )ERASE
@@ -149,27 +169,6 @@ Primitives, Commands & Basic constructs:
       # ## ⎕PATH
       ⎕SE
 ```
-
-- Namespaces
-    - Like a WS within a WS
-    - `#`
-    - References
-
-        ```APL
-              'myns'⎕ns⍬
-              his←myns
-              myns.arg←0
-              his.arg
-        0
-              myns.arg←5
-              his.arg
-        5
-              myvar←7
-              hisvar←myvar
-              myvar←10
-              hisvar
-        7
-        ```
 
 # Day 2
 
