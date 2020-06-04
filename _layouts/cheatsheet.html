@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="icon" href="{{ site.baseurl }}/img/favicon.png" sizes="64x64">
+	<title>Cheatsheet: {{ page.title }}</title>
+	<script>
+	window.MathJax = {
+		tex: {inlineMath: [["@@", "@@"]],displayMath: [["%%","%%"]]},
+		svg: {fontCache: 'global'}
+	};
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/cheatsheet.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/alerts.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/print.css">
+</head>
+<body>
+	<div class="course-content">
+	<h1 class="cs-home" ><a href=".">Dyalog APL Cheatsheets</a></h1>
+	{{ content }}
+	</div>
+</body>
+</html>
