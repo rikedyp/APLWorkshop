@@ -211,7 +211,7 @@ Faye
         - Shift-Esc 
         - Ctrl-Shift-Backspace
         - Ctrl-Shift-Enter 
-        - Ctrl(-Shit)-Tab 
+        - Ctrl(-Shift)-Tab 
         
         
     - UCMDs 
