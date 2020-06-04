@@ -48,13 +48,14 @@ table th {
 
 table td:first-child {column-span: 0;}
 table td {
+    padding-left: 0.2ex;
     font-size: 1.2em;
     color: #231F20;
     background-color: #F6F6D9;
 }
 
-
-tr:nth-child(3), td {border-top: solid 4px #999999;}
+td:not(:first-child) {border-left: solid 2px #999999;}
+tr:nth-child(n+3) td {border-top: solid 2px #999999;}
 
 body {
     background: #5A6D8F;    
@@ -74,15 +75,10 @@ h1, h2, h3, h4 {color: #fff;}
 
 h2, h3, h4 {left: 3vw;}
 
-ol ol {list-style-type: lower-alpha;}
-ol ol ol {list-style-type: lower-roman;}
-
 pre, code {    
-    background: #3C4F76;
-    color: white;
+    color: #231F20;
     padding: 0.3em 0.7em 0.3em 0.7em;
-    overflow: auto;    
-    border-radius: 0.7em;
+    overflow: auto;
     font-family: "APL385";
     line-height: 1.2em;
 }
