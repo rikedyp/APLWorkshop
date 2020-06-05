@@ -1,0 +1,18 @@
+[
+	{
+	"ucmd": "]box -trains=tree -fns=on",
+	"action": "Enable boxing with trains and fns"
+	},
+	{
+	"ucmd": "]rows -fold=3",
+	"action": "Compress excessive output"
+	},
+	{
+	"ucmd": "]chart",
+	"action": "Chart"
+	},
+  	{
+	"ucmd": "]plot",
+	"action": "Plot"
+	}
+]

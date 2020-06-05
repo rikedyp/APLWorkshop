@@ -1,0 +1,50 @@
+[
+	{
+		"shortcut": "Ctrl-Home/End",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "Shift-Enter",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "Ctrl-Enter",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "Esc",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "Shift-Esc",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "Ctrl-Up Arrow",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "NumPad-[line numbers]",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "NumPad/ [reformat]",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "Ctrl-Delete",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "Ctrl-Shift-Backspace",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "Ctrl-Shift-Enter",
+		"action": "INCLUDE FUNCTION HERE"
+	},
+	{
+		"shortcut": "Ctrl(-Shift)-Tab",
+		"action": "INCLUDE FUNCTION HERE"
+	}
+]

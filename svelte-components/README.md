@@ -2,7 +2,7 @@
 
 **NOTE:** This is an in-progress extension to the APLWorkshop "system."
 
-[Svelte]() and [Carbon]() are used in conjunction with [Jekyll]() and [GitHub Pages]() to create interactive APL learning materials that are consistent across devices.
+[Svelte](https://svelte.dev/) and [Carbon](https://github.com/IBM/carbon-components-svelte) are used in conjunction with [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/) to create interactive APL learning materials that are consistent across devices.
 
 At present, the only part of this repository utilizing this framework are the [cheatsheets](../cheatsheets/).
 
