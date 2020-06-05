@@ -15,6 +15,5 @@ At present, the only part of this repository utilizing this framework are the [c
 ### Local Server
 
 1. Execute `npm run dev` in this directory to watch/build Svelte
-	* Using [husky](https://github.com/typicode/husky) we `npm run build` to build for production on pre-commit
 2. Execute the `serve.sh` shell script in the root directory to run the main Jekyll file watcher
 
