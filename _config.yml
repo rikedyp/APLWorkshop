@@ -1,2 +1,8 @@
 title: Learn Dyalog APL
 repository: rikedyp/APLWorkshop
+exclude:
+  - svelte-components
+  - node_modules
+  - package.json
+  - package-lock.json
+

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="icon" href="{{ site.baseurl }}/img/favicon.png" sizes="64x64">
-	<title>Cheatsheet: {{ page.title }}</title>
+	<title>{{ page.title}}</title>
 	<script>
 	window.MathJax = {
 		tex: {inlineMath: [["@@", "@@"]],displayMath: [["%%","%%"]]},
@@ -12,12 +12,10 @@
 	};
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-	<link href="{{ site.baseurl }}/dist/svelte-bundle.css?{{site.time | date: '%s%N'}}" rel="stylesheet">
-	<script defer src="{{ site.baseurl }}/dist/svelte-bundle.js?{{site.time | date: '%s%N'}}"></script>
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
 </head>
 <body>
 	<div class="course-content">
-	<h1 class="cs-home" ><a href=".">Dyalog APL Cheatsheets</a></h1>
 	{{ content }}
 	</div>
 </body>
