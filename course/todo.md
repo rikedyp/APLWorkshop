@@ -5,7 +5,11 @@ back: /course/plan
 next: /
 ---
 
-# To do
+# Main Course
+Write sessions according to [the plan]({{site.baseurl}}/-course/plan).
+
+# Extra Modules
+Further content may be provided as workshop modules or as [Jupyter notebooks](https://github.com/rikedyp/LearnAPL).
 
 ## History of APL (link to APL wiki & HOPL paper?)
 - ppt 1

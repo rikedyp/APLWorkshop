@@ -11,16 +11,18 @@ next: /course/todo
 
 Introduction to APL and Problem Solving
 
-Estimated time: `? hrs`
+## 1: First Steps
 
-## First Steps
-Estimated time: `40 mins`
+#### To do
+- counting vowels / text problems
+- Use `⌿`
 
 #### Learning Objectives
 
 1. Use an APL interpreter
 1. Understand the meaning of monadic and dyadic function application  
 1. Understand the order of execution   
+1. Understand conformance of arguments to scalar functions
 
 #### Success Criteria
 Students can:
@@ -36,12 +38,11 @@ Primitives & Basic constructs:
       (a-b)-c
 ```
    
-## Dfns and Assignment
-Estimated time: `40 mins`
+## 2: Dfns and Assignment
 
 #### To do
-- Where without ⍸ problem
-- Compression
+- examples which generate errors to be fixed
+- demonstrate iterative function building in the session
 
 #### Learning Objectives
 1. Know what dfns are and what they look like
@@ -59,8 +60,11 @@ Primitives & Basic constructs:
       name ← value      
 ```
 
-## Selecting from Lists
-Estimated time: `20 mins`
+## 3: Selecting from Lists
+
+#### To do
+- Where without ⍸ problem
+- Compression
 
 #### Learning Objectives
 1. Understand that logical statements can be expressed as selections from arrays
@@ -77,8 +81,7 @@ New constructs:
       {⍵/⍳≢⍵}
 ```
 
-## The Outer Product
-Estimated time: `25 mins`
+## 4: The Outer Product
 
 #### Learning Objectives
 1. Understand that the outer product `⍺ ∘.f ⍵` can be used to compute tables
@@ -94,30 +97,27 @@ Estimated time: `25 mins`
       < ≤ ≥ > 
 ```
 
-## Multidimensional Arrays
-Estimated time: `30 mins`
+## Reductions
 
 #### Learning Objectives
 1. Understand that all arrays are described as a shape and a list of values
 1. Know how to use the shape and reshape functions `⍴`
 1. Know that `≢⍴` is the rank of an array
-1. Understand that the shape of an indexing expression is determined by the shape of the array of indices
 1. Understand empty axes and empty arrays
 1. Understand empty array jokes
 
 #### Success Criteria
 1. Students can determine the shape of the result of an outer product or indexing expression without evaluating the expression
 1. Students can solve problems using `⍴` and simple indexing
+1. Students can summarise data along different dimensions using the rank operator
 
 ```APL
-      ⍴ 
-      array[I]
-      array[n m⍴I]
-      array[;;]
+      (⍴)(≢⍴) 
+      (+⌿⍤k)
+      +⌿[a]
 ```
 
-## The Array Model
-Estimated time: `40 mins`
+## Cells and Rank
 
 #### Learning Objectives
 1. Know the terms major cell, k-cell, axis, dimension, tally and rank in terms of array shape
@@ -126,6 +126,8 @@ Estimated time: `40 mins`
 1. Know how to use rank `⍤` to loop over k-cells
 
 #### Success Criteria
+1. Students can apply 
+1. Students can reason about when an application of rank will error
 
 #### New constructs
 
@@ -133,8 +135,42 @@ Estimated time: `40 mins`
       ⍤ ⌷ ⊂ []
 ```
 
+## Indexing
+
+#### To do
+- Cells & Axes
+- Reshaping data for processing
+- Selecting data of different shapes
+    - Link to webinar 
+- Index-of
+- High rank membership
+- PDI
+
+Example:
+Monthly sales data
+Reshape into years / quarters & do summaries
+
+#### Learning Objectives
+1. Understand that the shape of an indexing expression is determined by the shape of the array of indices
+
+#### Success Criteria
+
+#### New Constructs
+
+```APL
+      array[I]
+      array[n m⍴I]
+      array[;;]
+      a ⍳ b        ⍝ Index-of
+      {(≢⍺)≥⍺⍳⍵}   ⍝ First-axis membership
+```
+
+#### Optional Extra
+- `⌷⍤` Squad with rank
+- `⌷[]` Squad with axis
+- `,⍪⊖⌽` Other axis-optional primitives compared to their use with rank
+
 ## Workspace Basics
-Estimated time: `20 mins`
 
 #### Learning Objectives
 1. Understand that a workspace is a collection of APL names
@@ -172,35 +208,9 @@ Students can
 
 # Day 2
 
-Estimated time:
-
-## Going Higher
-Primitives & Basic constructs:
-
-- Cells & Axes
-- Rank Operator vs Axis "Operator"
-
-```APL
-      ⍴ 
-      (⍴,≢)
-      ⍳ ⌷[] ⌷⍤      
-```
-
-- Cells & Axes
-- Reshaping data for processing
-- Selecting data of different shapes
-    - Link to webinar 
-- Index-of
-- High rank membership
-- PDI
-
-Example:
-Monthly sales data
-Reshape into years / quarters & do summaries
-
-- Further problem solving practise
-
 ## Going Deeper
+Primitive Loops and Recursion 
+
 - Nested vs. Simple arrays 
 - Stranding
 - Prototypes
@@ -213,6 +223,12 @@ Reshape into years / quarters & do summaries
       ¨ ⍤ ⍣
       {∇⍵}
 ```
+
+- Fac
+- Fib
+- `NSort←{0=⍴⍵:⍬⋄(U⌿⍵),∇(~U←⍵=⌊⌿⍵)⌿⍵}`
+- `TSort←{⍺[((⍴⍵)[2])S ⍺⍳⍵]}`
+- `S←{⍺=0:⍵ ⋄ (⍺-1)S ⍵[⍋⍵[;⍺];]}`
 
 ## Files & IO
 Primitives, Commands & Basic constructs:
@@ -257,16 +273,6 @@ Primitives, Commands & Basic constructs:
 - Changing name class on assignment
 
 # Day 3
-
-## Array & Interpreter Internals
-
-```APL
-⎕DR ⎕FR ⎕CT ⎕ML 
-
-⍝ Array analysis
-'char' 'ref' 'num'[(326∘= + (~2|⊢))⎕DR¨mat]
-
-```
 
 ## Extra Assignment
 - Valid names `a_ó∆ø1⍙`
@@ -365,5 +371,23 @@ Primitives, Commands & Basic constructs:
 - APLCart
 
 
-## Being an APLer
+## Final Project
 Longer form practise project where students apply knowledge and use resources to build small applications
+
+# Optional Extras
+
+These modules may be linked to from parts of the main course, intended for use if certain students complete sections very quickly. Of course, having students teach others, thereby reinforcing their own learning, is very beneficial as well.
+
+## The Inner Product
+
+## Array & Interpreter Internals
+
+```APL
+⎕DR ⎕FR ⎕CT ⎕ML 
+
+⍝ Array analysis
+'char' 'ref' 'num'[(326∘= + (~2|⊢))⎕DR¨mat]
+
+```
+
+## Notes on Performance
