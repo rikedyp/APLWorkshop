@@ -24,11 +24,16 @@ next: /
     - Dfns & tacit programming for functional data manipulation
     - Tradfns for program control and system interaction
 
+### Technical
+Possible to put in an HTMLRenderer?
+
 ### Workshop Layout
 
 Notes are sufficient for students to learn the basic constructs needed to solve the problems on each page. The accompanying video may contain additional explanations, visualisations and analogies to aid understanding. Instructors are advised to deliver this content "live" (in real time) so that students can ask questions as they arise. Independent learners can use the materials as provided.
 
 Initially, concepts are sufficiently explained so that the students only needs to apply them to the problems given. As the course progresses, students are given examples and should discover the behaviour for themselves.
+
+Although this course provides an order of modules, it should be perfectly fine to shuffle sessions around and address certain topics sooner than otherwise. It is possible that in conversations and students' questioning it will be worthwhile to introduce things not yet introduced.
 
 ### Language Learning
 
@@ -158,5 +163,23 @@ I actually sometimes appreciate the tradfn header, as it gives me a quick hint a
 ### Primitive Playground
 A set of problems, each one designed specifically around a particular primitive.
 
-### Selecting from Lists
+### Selecting from Arrays
 The first few sessions are designed to teach array-oriented approaches to problems which are often framed as a loop over a sequence of logical statements. In fact, in some courses, control structures are taught under the title of "selection". A sum as a reduction over a list (as opposed to the incrementataion of an accumulator, as is used when counting using one's fingers), together with implicit mapping of scalar functions, are two foundational concepts in array programming.
+
+It is said that APLers have over 100 words for indexing, by people who are wrong. I've so far counted `5` and here they are.
+
+```APL
+      A←2 3 4⍴⎕A
+      A[1 2;3;]   ⍝ Simple Bracket Indexing
+IJKL
+UVWX
+      2 3⌷A    ⍝ Squad Indexing
+      A[(1 1 1)(2 1 4)(1 3 4)]   ⍝ Choose Indexing
+APL
+
+      nest←nest←2 3⍴'DY' 'AL' 'OG' ⍬ (⍬((2 2)2)) ⍬
+      nest[⊂(2 2)2]     ⍝ Reach Indexing
+      (2 2)2⊃nest       ⍝ Pick
+      S←((⊃⊣)⌷⊢)⍤0 99   ⍝ Select
+      (1 1)(1 2 1)(1 2 2) S A
+```
