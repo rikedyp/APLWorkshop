@@ -211,7 +211,11 @@ Students can
 Primitive Loops and Recursion 
 
 #### Learning Objectives
+1. To understand stranding
 1. Know how to use each `¨` to loop over elements 
+
+#### Success Criteria
+1. 
 
 - Nested vs. Simple arrays 
 - Stranding
@@ -224,6 +228,21 @@ Primitive Loops and Recursion
       ≡ ⍬ ''
       ¨ ⍤ ⍣
       {∇⍵}
+```
+
+```APL
+      enm←2 3⍴⍬
+      ecm←3 2⍴''
+      'a' 'b' 'c'
+      'abc'
+      mixed←3 3⍴1 2 3 'a' 'b' 'c'       
+      3 1⍴mixed enm ecm
+      ⍪mixed enm ecm
+      mixed,ecm
+      mixed⍪ecm
+      mixed⍪enm
+      3 3⍴mixed,ecm 
+      3 3⍴mixed enm,ecm
 ```
 
 - Fac

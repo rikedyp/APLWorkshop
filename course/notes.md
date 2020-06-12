@@ -5,6 +5,9 @@ back: /
 next: /
 ---
 
+### Terminology
+
+
 ### Style
 
 `code`
@@ -27,6 +30,50 @@ Notes are sufficient for students to learn the basic constructs needed to solve 
 
 Initially, concepts are sufficiently explained so that the students only needs to apply them to the problems given. As the course progresses, students are given examples and should discover the behaviour for themselves.
 
+### Language Learning
+
+Learning APL can be more like learning a natural language
+- Learn in the native script (no romanisation / wordification of symbolic constructs)
+- Produce output from the beginning
+    - Have output corrected by "native speaker" (experienced user) 
+- Frequent input and exposure to model
+
+Not every word or construct needs to be explicitly introduced before use or reference. Observing the use of words which one doesn't understand is normal at the beginning of learning a language. Often seeing the result in context is enough to at least know "what is going on". 
+
+### Terminology
+
+It might be worth putting together a guide to the spoken language APL. Many functions are spoken by their function name in context, while others have colloquially adopted the symbol to refer to one of their common uses.
+
+{% include hint.html id="1" content="APL is fun for the whole family!" %}
+
+{% include note.html content="
+
+This function returns the prime numbers up to `⍵`. If I were dictating this to someone, I might say:
+> *Where two equals plus slash-bar zero equals jot-dot mod selfie iota omega*
+
+However, it is generally best practice to give the function names:
+
+> *Where two equals the plus reduce-first (plus reduction along the first axis) of zero equals the residue outer-product selfie of the indices up to omega*
+
+The expression translates more literally to English as:
+
+> *zero equals the modulus between all combinations of numbers from one to the integer right argument inclusive*
+
+> *Positive integers up to ⍵ which have two factors*
+
+```APL
+      Primes←{⍸2=+⌿0=∘.|⍨⍳⍵}   ⍝ Primes up to ⍵
+```
+
+" %}
+
+(12 3 4⍴(3×4)/1 10 100 1000)×a
+(12⍴1 10 100 1000)×⍤0 2⊢a
+
+{% include note.html content="Rho, rho, rho of X Always equals 1 Rho is dimension, rho rho rank. APL is fun!"%}
+Richard M. Stallman, 1969
+
+
 ### End of day 1
 If you've made it this far, you'll probably want to install Dyalog. The APL interpreter is free for non-commercial use. 
 
@@ -41,36 +88,6 @@ If students get to this part with time to spare, then we can do more problem sol
 - complex numbers
 
 Otherwise, explore topics which arise from students' questions naturally.
-
-### Language Learning
-Learning APL can be more like learning a natural language
-- Learn in the native script (no romanisation / wordification of symbolic constructs)
-- Produce output from the beginning
-    - Have output corrected by "native speaker" (experienced user) 
-- Frequent input and exposure to model
-
-Not every word or construct needs to be explicitly introduced before use or reference. Observing the use of words which one doesn't understand is normal at the beginning of learning a language. Often seeing the result in context is enough to at least know "what is going on". 
-
-It might be worth putting together a guide to the spoken language APL. Many functions are spoken by their function name in context, while others have colloquially adopted the symbol to refer to one of their common uses.
-
-{% include hint.html id="1" content="APL is fun for the whole family!" %}
-
-{% include note.html content="what about this one?" %}
-
-{% include note.html content="
-
-Does this work?
-
-Here is my note content
-
-" %} 
-
-
-(12 3 4⍴(3×4)/1 10 100 1000)×a
-(12⍴1 10 100 1000)×⍤0 2⊢a
-
-{% include note.html content="Rho, rho, rho of X Always equals 1 Rho is dimension, rho rho rank. APL is fun!"%}
-Richard M. Stallman, 1969
 
 ### Assessment
 - Written test
