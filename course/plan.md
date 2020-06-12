@@ -122,7 +122,6 @@ New constructs:
 #### Learning Objectives
 1. Know the terms major cell, k-cell, axis, dimension, tally and rank in terms of array shape
 1. Know the difference between simple and nested arrays
-1. Know how to use each `¨` to loop over elements 
 1. Know how to use rank `⍤` to loop over k-cells
 
 #### Success Criteria
@@ -211,6 +210,9 @@ Students can
 ## Going Deeper
 Primitive Loops and Recursion 
 
+#### Learning Objectives
+1. Know how to use each `¨` to loop over elements 
+
 - Nested vs. Simple arrays 
 - Stranding
 - Prototypes
@@ -242,9 +244,9 @@ Primitives, Commands & Basic constructs:
 ```
 
 ## Tools & Interfaces
-- Tool bar?
-
-
+- Tool bar
+- Graph
+- HttpCommand?
 
 ## Handling Data
 Primitives, Commands & Basic constructs:
