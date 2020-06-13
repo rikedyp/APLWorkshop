@@ -163,6 +163,11 @@ I actually sometimes appreciate the tradfn header, as it gives me a quick hint a
 ### Primitive Playground
 A set of problems, each one designed specifically around a particular primitive.
 
+1. Counting Vowels  
+    `'aeiou'(+/∊⍨)'mississippi'`
+1. Matching Cycles
+    `r1(∧÷,)r1`    
+
 ### Selecting from Arrays
 The first few sessions are designed to teach array-oriented approaches to problems which are often framed as a loop over a sequence of logical statements. In fact, in some courses, control structures are taught under the title of "selection". A sum as a reduction over a list (as opposed to the incrementataion of an accumulator, as is used when counting using one's fingers), together with implicit mapping of scalar functions, are two foundational concepts in array programming.
 
@@ -183,3 +188,30 @@ APL
       S←((⊃⊣)⌷⊢)⍤0 99   ⍝ Select
       (1 1)(1 2 1)(1 2 2) S A
 ```
+
+### Pedagogy
+Lessons roughly follow the structure:
+
+┌ 1. Introduction
+│ 2. Activity
+└ 3. Assessment
+
+Introductions give context or a link to prior learning. 
+
+All modules have activities; we learn by doing. Some modules have written notes and problems to solve, with content which models a written numbered exam. Some have more exploratory activities to help foster intuition. 
+
+Assessment comes in many forms. It could be just an indication that learners are ready to move on, or it could be an invigilated exam. 
+
+Some examples:  
+- Use thumbs up/down to indicate readiness to move on
+- Write or share with the class
+    - 3 things you have learned
+    - What you found easy
+    - What you found hard
+    - Something you would like to learn in the future
+- Written test 
+- Problem solving
+- Project work
+    Implement a small application
+
+If possible, there should be a few short cycles of this structure within sessions. The assessments can help everyone to decide when to move on to new material, or if something needs reclarification. Discussions may indicate that a detour into some other material might be a good idea.

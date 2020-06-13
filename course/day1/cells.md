@@ -13,7 +13,7 @@ Try the following examples. Describe each one and then describe the general beha
       names←↑'Angela' 'Pete' 'Leslie'
       'Pete  '(=⍤1 1)names
       scores[names⍳'Pete  ']
-      scores⌿⍨∧/names(=⍤1 1)'Pete  '
+      (∧/names(=⍤1 1)'Pete  ')⌿scores
       names(∨/⍷⍤1)(⊃⌽⍴names)↑'Pete'
       mass←1 3 5 8 4
       pos←?5 3⍴0
@@ -32,7 +32,7 @@ Try the following examples. Describe each one and then describe the general beha
 ```
 
 # Problems n: Cells & Rank
-1. Match the following rank operands with their descriptions. All expressions
+1. Match the following rank operands with their descriptions. All expressions can be used with dyadic functions.
 
 
     `⍤1 3`

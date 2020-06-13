@@ -13,10 +13,6 @@ Introduction to APL and Problem Solving
 
 ## 1: First Steps
 
-#### To do
-- counting vowels / text problems
-- Use `⌿`
-
 #### Learning Objectives
 
 1. Use an APL interpreter
