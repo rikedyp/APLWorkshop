@@ -12,9 +12,11 @@ next: /
 
 `code`
 
-[internal link](#)
+[link](#)
 
 **new jargon**
+
+To do: distinguish between internal / external links
 
 ### Themes
 - Modern APL techniques from day-1
@@ -31,9 +33,27 @@ Possible to put in an HTMLRenderer?
 
 Notes are sufficient for students to learn the basic constructs needed to solve the problems on each page. The accompanying video may contain additional explanations, visualisations and analogies to aid understanding. Instructors are advised to deliver this content "live" (in real time) so that students can ask questions as they arise. Independent learners can use the materials as provided.
 
-Initially, concepts are sufficiently explained so that the students only needs to apply them to the problems given. As the course progresses, students are given examples and should discover the behaviour for themselves.
+Initially, concepts are sufficiently explained so that the students only need to apply them to the problems given. As the course progresses, students are given examples and should discover the behaviour for themselves.
 
 Although this course provides an order of modules, it should be perfectly fine to shuffle sessions around and address certain topics sooner than otherwise. It is possible that in conversations and students' questioning it will be worthwhile to introduce things not yet introduced.
+
+### Selecting from Arrays
+The first few sessions are designed to teach array-oriented approaches to problems which are often framed as a loop over a sequence of logical statements. In fact, in some courses, control structures are taught under the title of "selection". A sum as a reduction over a list (as opposed to the incrementataion of an accumulator, as is used when counting using one's fingers), together with implicit mapping of scalar functions, are two foundational concepts in array programming.
+
+It is said that APLers have over 100 words for indexing, by people who are wrong. I've so far counted `5` (there are more) and here they are.
+
+```APL
+      A←2 3 4⍴⎕A
+      A[1 2;3;]                  ⍝ Simple Bracket Indexing
+      2 3⌷A                      ⍝ Squad Indexing
+      A[(1 1 1)(2 1 4)(1 3 4)]   ⍝ Choose Indexing
+
+      nest←2 3⍴'DY' 'AL' 'OG' ⍬ (⍬((2 2)2)) ⍬
+      nest[⊂(2 2)2]             ⍝ Reach Indexing
+      (2 2)2⊃nest               ⍝ Pick
+      S←((⊃⊣)⌷⊢)⍤0 99   
+      (1 1)(1 2 1)(1 2 2) S A   ⍝ Select
+```
 
 ### Language Learning
 
@@ -78,22 +98,6 @@ The expression translates more literally to English as:
 {% include note.html content="Rho, rho, rho of X Always equals 1 Rho is dimension, rho rho rank. APL is fun!"%}
 Richard M. Stallman, 1969
 
-
-### End of day 1
-If you've made it this far, you'll probably want to install Dyalog. The APL interpreter is free for non-commercial use. 
-
-Day 1 ends with some workspace and namespace basics
-If students get to this part with time to spare, then we can do more problem solving while introducing other common mathematical constructs.
-
-`* ⍟ ⌈ ⌊ ○`
-
-- find the range
-- cumulative interest
-- trigonometry & shapes
-- complex numbers
-
-Otherwise, explore topics which arise from students' questions naturally.
-
 ### Assessment
 - Written test
     Answer questions and evaluate expressions without an interpreter
@@ -106,6 +110,9 @@ Otherwise, explore topics which arise from students' questions naturally.
     Kahoot quiz probably
 
 ### Examples etc.
+
+A place to paste examples which might be useful in some modules (not all content has been written up yet)
+
 ```APL
       gibberish←'janfebmaraprmayjunjulaugsepoctnovdec'
       months←12 3⍴gibberish
@@ -130,11 +137,19 @@ Otherwise, explore topics which arise from students' questions naturally.
 ```
 
 - Stupid text editor using
-```APL
-      edit@(⍸'/'=input)⊢array
-      array[⍸'/'=input]←edit
-      (pos/array)←edit
-```
+    ```APL
+          edit@(⍸'/'=input)⊢array
+          array[⍸'/'=input]←edit
+          (pos/array)←edit
+    ```
+
+### Primitive Playground
+A set of problems, each one designed specifically around a particular primitive.
+
+1. Counting Vowels  
+    `'aeiou'(+/∊⍨)'mississippi'`
+1. Matching Cycles
+    `r1(∧÷,)r1`    
 
 ### Axis vs Rank
 
@@ -160,47 +175,20 @@ Otherwise, explore topics which arise from students' questions naturally.
 ### User defined function style
 I actually sometimes appreciate the tradfn header, as it gives me a quick hint at how this thing is to be called, and if proper names are used, also what the arguments/operands are supposed to hold. A dop using only ⍺ ⍵ ⍺⍺ ⍵⍵ gives no hints as to the purpose of anything, and you have to go hunting in a large one, to see if it is a function or an operator.
 
-### Primitive Playground
-A set of problems, each one designed specifically around a particular primitive.
-
-1. Counting Vowels  
-    `'aeiou'(+/∊⍨)'mississippi'`
-1. Matching Cycles
-    `r1(∧÷,)r1`    
-
-### Selecting from Arrays
-The first few sessions are designed to teach array-oriented approaches to problems which are often framed as a loop over a sequence of logical statements. In fact, in some courses, control structures are taught under the title of "selection". A sum as a reduction over a list (as opposed to the incrementataion of an accumulator, as is used when counting using one's fingers), together with implicit mapping of scalar functions, are two foundational concepts in array programming.
-
-It is said that APLers have over 100 words for indexing, by people who are wrong. I've so far counted `5` and here they are.
-
-```APL
-      A←2 3 4⍴⎕A
-      A[1 2;3;]   ⍝ Simple Bracket Indexing
-IJKL
-UVWX
-      2 3⌷A    ⍝ Squad Indexing
-      A[(1 1 1)(2 1 4)(1 3 4)]   ⍝ Choose Indexing
-APL
-
-      nest←nest←2 3⍴'DY' 'AL' 'OG' ⍬ (⍬((2 2)2)) ⍬
-      nest[⊂(2 2)2]     ⍝ Reach Indexing
-      (2 2)2⊃nest       ⍝ Pick
-      S←((⊃⊣)⌷⊢)⍤0 99   ⍝ Select
-      (1 1)(1 2 1)(1 2 2) S A
-```
-
 ### Pedagogy
 Lessons roughly follow the structure:
 
+```
 ┌ 1. Introduction
 │ 2. Activity
 └ 3. Assessment
+```
 
 Introductions give context or a link to prior learning. 
 
 All modules have activities; we learn by doing. Some modules have written notes and problems to solve, with content which models a written numbered exam. Some have more exploratory activities to help foster intuition. 
 
-Assessment comes in many forms. It could be just an indication that learners are ready to move on, or it could be an invigilated exam. 
+Assessment comes in many forms. It could be just an indication that learners are ready to move on, or it could be more formal like an invigilated exam. 
 
 Some examples:  
 - Use thumbs up/down to indicate readiness to move on

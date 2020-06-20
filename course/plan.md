@@ -21,7 +21,6 @@ Introduction to APL and Problem Solving
 1. Understand conformance of arguments to scalar functions
 
 #### Success Criteria
-Students can:
 1. Type APL symbols  
 1. Solve simple arithmetic problems using reductions
 1. Change the order of execution using parentheses
@@ -37,8 +36,8 @@ Primitives & Basic constructs:
 ## 2: Dfns and Assignment
 
 #### To do
-- examples which generate errors to be fixed
-- demonstrate iterative function building in the session
+- examples which generate errors 
+- demonstrate iterative function building in the session (video)
 
 #### Learning Objectives
 1. Know what dfns are and what they look like
@@ -68,7 +67,7 @@ Primitives & Basic constructs:
 1. Know how to select from vectors using compress and square brackets
 
 #### Success Criteria
-1. Students can solve problems using selection
+1. Solve problems using selection
 
 New constructs:
 
@@ -95,6 +94,9 @@ New constructs:
 
 ## Reductions
 
+#### Note
+While all older writing uses the axis operator, modern APLers benefit from the rank operator. The rank operator can often produce exactly equivalent expressions as axis, and rank is more general in that it can apply to any function including user-defined functions. Therefore, I believe a modern introduction should only use the rank operator for these concepts. However, since the axis operator appears in existing code - and it is useful for some mental models of certain array operations - it might be prudent to include axis early on, and a comparison of the *axis vs. rank* models of arrays a bit later.
+
 #### Learning Objectives
 1. Understand that all arrays are described as a shape and a list of values
 1. Know how to use the shape and reshape functions `⍴`
@@ -103,9 +105,9 @@ New constructs:
 1. Understand empty array jokes
 
 #### Success Criteria
-1. Students can determine the shape of the result of an outer product or indexing expression without evaluating the expression
-1. Students can solve problems using `⍴` and simple indexing
-1. Students can summarise data along different dimensions using the rank operator
+1. Determine the shape of the result of some expressions using only the shape of the arguments
+1. Solve problems using `⍴` and summation using axis or rank
+1. Summarise data along different dimensions using the rank operator
 
 ```APL
       (⍴)(≢⍴) 
@@ -116,31 +118,23 @@ New constructs:
 ## Cells and Rank
 
 #### Learning Objectives
-1. Know the terms major cell, k-cell, axis, dimension, tally and rank in terms of array shape
+1. Know the terms major cell, k-cell, axis (possibly), dimension, tally and rank - and what they are in terms of array shape
 1. Know the difference between simple and nested arrays
 1. Know how to use rank `⍤` to loop over k-cells
 
 #### Success Criteria
-1. Students can apply 
+1. Students can apply the rank operator to solve a variety of problems, including those previously solved using `⍴` reshape (to make two arrays conformable)
 1. Students can reason about when an application of rank will error
 
 #### New constructs
 
 ```APL
-      ⍤ ⌷ ⊂ []
+      ↑ ↓   ⍝ Mix / split
 ```
 
 ## Indexing
 
 #### To do
-- Cells & Axes
-- Reshaping data for processing
-- Selecting data of different shapes
-    - Link to webinar 
-- Index-of
-- High rank membership
-- PDI
-
 Example:
 Monthly sales data
 Reshape into years / quarters & do summaries
@@ -149,18 +143,20 @@ Reshape into years / quarters & do summaries
 1. Understand that the shape of an indexing expression is determined by the shape of the array of indices
 
 #### Success Criteria
+1. Students can determine the shape of the result of an indexing expression without executing (without the `⍴` shape function)
+1. Students can solve problems using `⍳` index-of with `[]` simple indexing
 
 #### New Constructs
 
 ```APL
       array[I]
       array[n m⍴I]
-      array[;;]
+      array[;n m⍴I;]
       a ⍳ b        ⍝ Index-of
       {(≢⍺)≥⍺⍳⍵}   ⍝ First-axis membership
 ```
 
-#### Optional Extra
+#### Optional Extras
 - `⌷⍤` Squad with rank
 - `⌷[]` Squad with axis
 - `,⍪⊖⌽` Other axis-optional primitives compared to their use with rank
@@ -180,7 +176,7 @@ Students can
 - Load a workspace
 - Copy names from a workspace
 - Create a named namespace
-- Copy functions into a namespace using NS.⎕CY
+- Copy functions into a namespace using `NS.⎕CY`
 
 #### New constructs:
 
@@ -208,23 +204,26 @@ Primitive Loops and Recursion
 
 #### Learning Objectives
 1. To understand stranding
+1. To know that "floating scalars" means that both the enclose and disclose of a simple scalar is itself
 1. Know how to use each `¨` to loop over elements 
+1. Know how to use `⍣` for iteration
+1. Know how to use `∇` dfn recursion
+1. Know that the prototypes for numeric and character arrays are `0` and `' '` respectively.
 
 #### Success Criteria
-1. 
+1. Determine the results of expressions involving stranding
+1. Solve problems using `¨ ⍣ ∇` different forms of iteration and recursion
 
-- Nested vs. Simple arrays 
-- Stranding
-- Prototypes
-- Floating scalars
-- Primitive Loops 
-- Dfn recursion
+#### New constructs
 
 ```APL
       ≡ ⍬ ''
       ¨ ⍤ ⍣
       {∇⍵}
+      ⊂ ⊃
 ```
+
+#### Examples
 
 ```APL
       enm←2 3⍴⍬
@@ -248,7 +247,9 @@ Primitive Loops and Recursion
 - `S←{⍺=0:⍵ ⋄ (⍺-1)S ⍵[⍋⍵[;⍺];]}`
 
 ## Files & IO
-Primitives, Commands & Basic constructs:
+How to read input and write output, both in the session and on the file system
+
+#### New constructs
 
 ```APL
       ⎕ ⍞ {//⎕VFI⍵}
@@ -259,12 +260,20 @@ Primitives, Commands & Basic constructs:
 ```
 
 ## Tools & Interfaces
-- Tool bar
+Practise using some of the tools provided by the IDE. It is likely that content from here will be redistributed throughout the course where specific tools are relevant to particular examples.
+
+- Tool bar (paste object, )
+- User commands
 - Graph
 - HttpCommand?
 
 ## Handling Data
-Primitives, Commands & Basic constructs:
+Practise using existing knowledge, as well as some new constructs, in tasks which involve handling "real" data (some of it may be from real sources, some may be created specifically to demonstrate a primitive or technique).
+
+#### To do
+IRL data e.g. https://www.kaggle.com/sudalairajkumar/daily-temperature-of-major-cities
+
+#### New constructs
 
 ```APL
       ⌸ ⍸ @ ⊤ ⊥ 
@@ -277,6 +286,7 @@ Primitives, Commands & Basic constructs:
       ⎕PW ⎕PP 
 ```
 
+### Topics
 - Organising data
     - Sorting
     - Classifying
@@ -286,8 +296,6 @@ Primitives, Commands & Basic constructs:
     - Structural
         - Rotate
         - Transpose
-
-- Changing name class on assignment
 
 # Day 3
 
@@ -312,14 +320,27 @@ Primitives, Commands & Basic constructs:
 - Sparse Matrices
 
 ## User Defined Functions
-- Dfns
-- Tradfns
-- Tacit
+
+#### Learning Objectives
+1. Know when it is appropriate to use each form of user definition
+    1. Dfns for pure functions & data transformation
+    1. Tradfns for program control and system interaction
+    1. Tacit for idioms 
+
+#### Success Criteria
+1. Reason about whether a particular function form is appropriate for a particular task
+1. Convert dfns to tacit and vice versa
+1. Spot errors when name class changes on assignment
+
+#### Optional Extra
+- User-defined operators
 
 ## Control Flow
+
+#### To do
 https://nbviewer.jupyter.org/github/rikedyp/LearnAPL/blob/master/Tutorials/MarkingTests.ipynb
 
-Primitives, Commands & Basic constructs:
+#### New constructs:
 
 ```APL
       :If :ElseIf :AndIf :OrIf :EndIf
@@ -365,6 +386,7 @@ Primitives, Commands & Basic constructs:
 - System functions & commands cheat sheet
 
 ## Out in the Wild
+Constructs which exist in older APL code but are considered problematic. Users will need to know what they mean, and may be required to use them to maintain the style of an existing code base.
 
 - GoTo, ppt 4, slide 105
 
@@ -379,7 +401,6 @@ Primitives, Commands & Basic constructs:
     "⎕PATH does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that may be developed in the future. ⎕PATH may therefore be considered an archaic feature."
 
 ## Your Resources
-
 - APL Wiki
 - F1 / web help
 - Email
@@ -387,13 +408,12 @@ Primitives, Commands & Basic constructs:
 - APL Orchard
 - APLCart
 
-
 ## Final Project
 Longer form practise project where students apply knowledge and use resources to build small applications
 
 # Optional Extras
 
-These modules may be linked to from parts of the main course, intended for use if certain students complete sections very quickly. Of course, having students teach others, thereby reinforcing their own learning, is very beneficial as well.
+These modules may be linked to form parts of the main course, intended for use if certain students complete sections very quickly. Of course, having students teach others, thereby reinforcing their own learning, is very beneficial as well.
 
 ## The Inner Product
 
