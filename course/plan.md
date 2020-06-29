@@ -375,12 +375,23 @@ https://nbviewer.jupyter.org/github/rikedyp/LearnAPL/blob/master/Tutorials/Marki
     ```
 
 ## Errors
+
+#### Learning Objectives
+1. Know the causes of common error messages
+1. Know how to find the description of a numeric error code
+1. Understand basic trapping and signalling of errors
+
+#### Success Criteria
+1. Use `⍳` index-of to find the codes of errors and vice versa
+1. Use aplcart to find the codes of errors and vice versa
+1. Write control structures to signal or re-signal errors in specific cases
+
 ```APL
       ⎕EM ⎕DMX
       ⎕TRAP ⎕SIGNAL
       :Trap :Case :EndTrap
       →   ⍝ Naked branch
-      )SIC
+      )reset )sic
 ```
 
 - System functions & commands cheat sheet
