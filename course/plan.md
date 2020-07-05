@@ -36,7 +36,6 @@ Primitives & Basic constructs:
 ## 2: Dfns and Assignment
 
 #### To do
-- examples which generate errors 
 - demonstrate iterative function building in the session (video)
 
 #### Learning Objectives
@@ -74,6 +73,7 @@ New constructs:
 ```APL
       [] ⍸ 
       {⍵/⍳≢⍵}
+      ⌽
 ```
 
 ## 4: The Outer Product
@@ -132,7 +132,7 @@ While all older writing uses the axis operator, modern APLers benefit from the r
       ↑ ↓   ⍝ Mix / split
 ```
 
-## Indexing
+## Selecting from Arrays
 
 #### To do
 Example:
@@ -149,6 +149,7 @@ Reshape into years / quarters & do summaries
 #### New Constructs
 
 ```APL
+      ↑ ↓
       array[I]
       array[n m⍴I]
       array[;n m⍴I;]
@@ -221,6 +222,7 @@ Primitive Loops and Recursion
       ¨ ⍤ ⍣
       {∇⍵}
       ⊂ ⊃
+      ⌽
 ```
 
 #### Examples
@@ -247,6 +249,9 @@ Primitive Loops and Recursion
 - `S←{⍺=0:⍵ ⋄ (⍺-1)S ⍵[⍋⍵[;⍺];]}`
 
 ## Files & IO
+
+#### Learning Objectives
+1. Know how to using `⎕` and `⍞` for input.
 How to read input and write output, both in the session and on the file system
 
 #### New constructs
@@ -279,7 +284,7 @@ IRL data e.g. https://www.kaggle.com/sudalairajkumar/daily-temperature-of-major-
       ⌸ ⍸ @ ⊤ ⊥ 
       ⍒ ⍋ ⌽ ⍉ ⊖
       ⍷
-      ⎕C ⎕DT
+      ⎕C ⎕DT ⍎ ⍕
       {⍵[⍋⍵]}
       ]box on 
       ]rows -fold=3

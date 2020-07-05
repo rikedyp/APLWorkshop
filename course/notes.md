@@ -143,6 +143,9 @@ A place to paste examples which might be useful in some modules (not all content
           (pos/array)←edit
     ```
 
+- From https://dl.acm.org/doi/pdf/10.1145/800058.801108
+  Given a matrix, find as many ways as you can of retrieving the element in the last column of the last row
+
 ### Primitive Playground
 A set of problems, each one designed specifically around a particular primitive.
 

@@ -7,10 +7,11 @@ next: /course/todo
 
 ### Cells
 
-Try the following examples. Describe each one and then describe the general behaviour 
+Experiment with the following examples. Describe each one and then describe the behaviour of the rank operator `⍤` in terms of `⍺` and `⍵`. 
 
 ```APL
       names←↑'Angela' 'Pete' 'Leslie'
+      scores←3 6 8
       'Pete  '(=⍤1 1)names
       scores[names⍳'Pete  ']
       (∧/names(=⍤1 1)'Pete  ')⌿scores
@@ -24,7 +25,9 @@ Try the following examples. Describe each one and then describe the general beha
 
 {% include hint.html id="arrayModel" content="If you feel stuck, check out <a target=_blank href='/course/day1/arraymodel'>The Array Model</a>." %}
 
-### Rank
+### Rank 
+
+Which of the following functions are affected by the rank operator, and which are not?
 
 ```APL
 ⊖ ⌽
@@ -32,7 +35,7 @@ Try the following examples. Describe each one and then describe the general beha
 ```
 
 # Problems n: Cells & Rank
-1. Match the following rank operands with their descriptions. All expressions can be used with dyadic functions.
+1. Match the following rank operands with their descriptions. Each use of rank pairs with two of the 10 description boxes below.
 
 
     `⍤1 3`
@@ -42,17 +45,18 @@ Try the following examples. Describe each one and then describe the general beha
     │⍤1 3│⍤2 1│⍤¯1│⍤0 99│⍤99 ¯1│
     └────┴────┴───┴─────┴──────┘
 
-    ┌────────────────┬────────────────┐
-    │3D arrays of ⍵  │major cells of ⍺│
-    ├────────────────┼────────────────┤
-    │vectors of ⍺    │matrices of ⍺   │
-    ├────────────────┼────────────────┤
-    │vectors of ⍵    │3D arrays of ⍵  │
-    ├────────────────┼────────────────┤
-    │major cells of ⍺│scalars of ⍺    │
-    ├────────────────┼────────────────┤
-    │matrices of ⍺   │vectors of ⍵    │
-    └────────────────┴────────────────┘
+    ┌─┐ ┌────────────────┐ ┌────────────┐
+    │⍵│ │major cells of ⍺│ │vectors of ⍺│
+    └─┘ └────────────────┘ └────────────┘
+    ┌────────────────┐ ┌─┐ ┌──────────────┐
+    │major cells of ⍵│ │⍺│ │3D arrays of ⍵│
+    └────────────────┘ └─┘ └──────────────┘
+    ┌────────────────┐ ┌────────────┐
+    │major cells of ⍵│ │scalars of ⍺│
+    └────────────────┘ └────────────┘
+    ┌────────────────┐ ┌────────────────┐
+    │matrices of ⍺   │ │vectors of ⍵    │
+    └────────────────┘ └────────────────┘
     ```
 
 1. For each name below, note the rank of arrays with that name.
@@ -78,3 +82,7 @@ Try the following examples. Describe each one and then describe the general beha
     │2D array│                    │
     └────────┴────────────────────┘
     ```
+
+### Cells and Axes
+
+### Rank and Axis
