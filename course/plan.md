@@ -248,22 +248,6 @@ Primitive Loops and Recursion
 - `TSort←{⍺[((⍴⍵)[2])S ⍺⍳⍵]}`
 - `S←{⍺=0:⍵ ⋄ (⍺-1)S ⍵[⍋⍵[;⍺];]}`
 
-## Files & IO
-
-#### Learning Objectives
-1. Know how to using `⎕` and `⍞` for input.
-How to read input and write output, both in the session and on the file system
-
-#### New constructs
-
-```APL
-      ⎕ ⍞ {//⎕VFI⍵}
-      ⎕←
-      ⎕CSV ⎕JSON ⎕XML
-      ⎕NGET ⎕NPUT
-      ⎕F...
-```
-
 ## Tools & Interfaces
 Practise using some of the tools provided by the IDE. It is likely that content from here will be redistributed throughout the course where specific tools are relevant to particular examples.
 
@@ -271,38 +255,6 @@ Practise using some of the tools provided by the IDE. It is likely that content 
 - User commands
 - Graph
 - HttpCommand?
-
-## Handling Data
-Practise using existing knowledge, as well as some new constructs, in tasks which involve handling "real" data (some of it may be from real sources, some may be created specifically to demonstrate a primitive or technique).
-
-#### To do
-IRL data e.g. https://www.kaggle.com/sudalairajkumar/daily-temperature-of-major-cities
-
-#### New constructs
-
-```APL
-      ⌸ ⍸ @ ⊤ ⊥ 
-      ⍒ ⍋ ⌽ ⍉ ⊖
-      ⍷
-      ⎕C ⎕DT ⍎ ⍕
-      {⍵[⍋⍵]}
-      ]box on 
-      ]rows -fold=3
-      ⎕PW ⎕PP 
-```
-
-### Topics
-- Organising data
-    - Sorting
-    - Classifying
-- Transforming data
-    - Base conversion 
-    - Case mapping/folding
-    - Structural
-        - Rotate
-        - Transpose
-
-# Day 3
 
 ## Extra Assignment
 - Valid names `a_ó∆ø1⍙`
@@ -339,6 +291,8 @@ IRL data e.g. https://www.kaggle.com/sudalairajkumar/daily-temperature-of-major-
 
 #### Optional Extra
 - User-defined operators
+
+# Day 3
 
 ## Control Flow
 
@@ -379,6 +333,22 @@ https://nbviewer.jupyter.org/github/rikedyp/LearnAPL/blob/master/Tutorials/Marki
           :AndIf OnlyComputableIfPreCondition
     ```
 
+## Files & IO
+
+#### Learning Objectives
+1. Know how to using `⎕` and `⍞` for input.
+How to read input and write output, both in the session and on the file system
+
+#### New constructs
+
+```APL
+      ⎕ ⍞ {//⎕VFI⍵}
+      ⎕←
+      ⎕CSV ⎕JSON ⎕XML
+      ⎕NGET ⎕NPUT
+      ⎕F...
+```
+
 ## Errors
 
 #### Learning Objectives
@@ -400,6 +370,36 @@ https://nbviewer.jupyter.org/github/rikedyp/LearnAPL/blob/master/Tutorials/Marki
 ```
 
 - System functions & commands cheat sheet
+
+## Handling Data
+Practise using existing knowledge, as well as some new constructs, in tasks which involve handling "real" data (some of it may be from real sources, some may be created specifically to demonstrate a primitive or technique).
+
+#### To do
+IRL data e.g. https://www.kaggle.com/sudalairajkumar/daily-temperature-of-major-cities
+
+#### New constructs
+
+```APL
+      ⌸ ⍸ @ ⊤ ⊥ 
+      ⍒ ⍋ ⌽ ⍉ ⊖
+      ⍷
+      ⎕C ⎕DT ⍎ ⍕
+      {⍵[⍋⍵]}
+      ]box on 
+      ]rows -fold=3
+      ⎕PW ⎕PP 
+```
+
+### Topics
+- Organising data
+    - Sorting
+    - Classifying
+- Transforming data
+    - Base conversion 
+    - Case mapping/folding
+    - Structural
+        - Rotate
+        - Transpose
 
 ## Out in the Wild
 Constructs which exist in older APL code but are considered problematic. Users will need to know what they mean, and may be required to use them to maintain the style of an existing code base.
@@ -444,3 +444,7 @@ These modules may be linked to form parts of the main course, intended for use i
 ```
 
 ## Notes on Performance
+
+### Dyadic Transpose
+I've heard at least one person say that mastery of dyadic `⍉` transpose is mastery of array programming.
+Reshape and rearrange a vector of monthly sales data to do convenient summaries with `⌿⍤`.

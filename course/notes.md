@@ -178,10 +178,6 @@ A set of problems, each one designed specifically around a particular primitive.
 ### User defined function style
 I actually sometimes appreciate the tradfn header, as it gives me a quick hint at how this thing is to be called, and if proper names are used, also what the arguments/operands are supposed to hold. A dop using only ⍺ ⍵ ⍺⍺ ⍵⍵ gives no hints as to the purpose of anything, and you have to go hunting in a large one, to see if it is a function or an operator.
 
-### Dyadic Transpose
-I've heard at least one person say that mastery of dyadic `⍉` transpose is mastery of array programming.
-Reshape and rearrange a vector of monthly sales data to do convenient summaries with `⌿⍤`.
-
 ### Pedagogy
 Lessons roughly follow the structure:
 
