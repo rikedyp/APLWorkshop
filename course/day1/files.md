@@ -13,10 +13,36 @@ Here it is in APL:
       ⎕←'Hello, World!'
 ```
 
-`⎕` (*quad*) is like the door to the outside of the session. 
+`⎕` (*quad*) is like the door to the outside of the session. `⎕` is used for both input and output.
+
+```APL
+      Test←{                                 
+         ⍺←0                          
+         s←⍎⎕←⍕(?10),('+-×÷'[?4]),?10 
+         a←⎕                          
+         p←⍺+a≡s                      
+         ⍵>1:p ∇ ⍵-1                  
+         ⎕←'You scored',p,'points' ⋄ p
+      }  
+      
+      Test 3
+```
+
+```APL
+      Test←{                                 
+         ⍺←0                          
+         s←⍎⎕←⍕(?10),('+-×÷'[?4]),?10 
+         a←⎕                          
+         p←⍺+a≡s                      
+         ⍵>1:p ∇ ⍵-1                  
+         ⎕←'You scored',p,'points' ⋄ p
+      }  
+      
+      Test 3
+```
 
 #### System Functions
-So `⎕` can be used for simple input and output.
+So `⎕` can be used for simple input and output. 
 
 
 
