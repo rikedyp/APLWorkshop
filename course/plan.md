@@ -56,10 +56,6 @@ Primitives & Basic constructs:
 
 ## 3: Selecting from Lists
 
-#### To do
-- Where without ⍸ problem
-- Compression
-
 #### Learning Objectives
 1. Understand that logical statements can be expressed as selections from arrays
 1. Know how to use scalar logic functions
@@ -92,7 +88,7 @@ New constructs:
       < ≤ ≥ > 
 ```
 
-## Reductions
+## 5: Reductions
 
 #### Note
 While all older writing uses the axis operator, modern APLers benefit from the rank operator. The rank operator can often produce exactly equivalent expressions as axis, and rank is more general in that it can apply to any function including user-defined functions. Therefore, I believe a modern introduction should only use the rank operator for these concepts. However, since the axis operator appears in existing code - and it is useful for some mental models of certain array operations - it might be prudent to include axis early on, and a comparison of the *axis vs. rank* models of arrays a bit later.
@@ -105,7 +101,6 @@ While all older writing uses the axis operator, modern APLers benefit from the r
 1. Understand empty array jokes
 
 #### Success Criteria
-1. Determine the shape of the result of some expressions using only the shape of the arguments
 1. Solve problems using `⍴` and summation using axis or rank
 1. Summarise data along different dimensions using the rank operator
 
@@ -115,7 +110,7 @@ While all older writing uses the axis operator, modern APLers benefit from the r
       +⌿[a]
 ```
 
-## Cells and Rank
+## 6: Cells and Rank
 
 #### Learning Objectives
 1. Know the terms major cell, k-cell, axis (possibly), dimension, tally and rank - and what they are in terms of array shape
@@ -123,6 +118,7 @@ While all older writing uses the axis operator, modern APLers benefit from the r
 1. Know how to use rank `⍤` to loop over k-cells
 
 #### Success Criteria
+1. Determine the shape of the result of some expressions using only the shape of the arguments
 1. Students can apply the rank operator to solve a variety of problems, including those previously solved using `⍴` reshape (to make two arrays conformable)
 1. Students can reason about when an application of rank will error
 
@@ -132,12 +128,7 @@ While all older writing uses the axis operator, modern APLers benefit from the r
       ↑ ↓   ⍝ Mix / split
 ```
 
-## Selecting from Arrays
-
-#### To do
-Example:
-Monthly sales data
-Reshape into years / quarters & do summaries
+## 7: Selecting from Arrays
 
 #### Learning Objectives
 1. Understand that the shape of an indexing expression is determined by the shape of the array of indices
@@ -162,7 +153,7 @@ Reshape into years / quarters & do summaries
 - `⌷[]` Squad with axis
 - `,⍪⊖⌽` Other axis-optional primitives compared to their use with rank
 
-## Workspace Basics
+## 8: Workspace Basics
 
 #### Learning Objectives
 1. Understand that a workspace is a collection of APL names
@@ -200,7 +191,7 @@ Students can
 
 # Day 2
 
-## Going Deeper
+## 9: Going Deeper
 Primitive Loops and Recursion 
 
 #### Learning Objectives
@@ -216,6 +207,8 @@ Primitive Loops and Recursion
 1. Solve problems using `¨ ⍣ ∇` different forms of iteration and recursion
 
 #### New constructs
+
+`Action → Interrupt` `Ctrl+Break`
 
 ```APL
       ≡ ⍬ ''
@@ -251,12 +244,7 @@ Primitive Loops and Recursion
 ## Tools & Interfaces
 Practise using some of the tools provided by the IDE. It is likely that content from here will be redistributed throughout the course where specific tools are relevant to particular examples.
 
-- Tool bar (paste object, )
-- User commands
-- Graph
-- HttpCommand?
-
-## Extra Assignment
+## 10: Extra Assignment
 - Valid names `a_ó∆ø1⍙`
 - Names do not begin with a `⎕D` digit   
 - Selective assignment
@@ -276,7 +264,7 @@ Practise using some of the tools provided by the IDE. It is likely that content 
 
 - Sparse Matrices
 
-## User Defined Functions
+## 11: User Defined Functions
 
 #### Learning Objectives
 1. Know when it is appropriate to use each form of user definition
@@ -292,9 +280,7 @@ Practise using some of the tools provided by the IDE. It is likely that content 
 #### Optional Extra
 - User-defined operators
 
-# Day 3
-
-## Control Flow
+## 12: Control Flow
 
 #### To do
 https://nbviewer.jupyter.org/github/rikedyp/LearnAPL/blob/master/Tutorials/MarkingTests.ipynb
@@ -311,8 +297,6 @@ https://nbviewer.jupyter.org/github/rikedyp/LearnAPL/blob/master/Tutorials/Marki
       :Leave :Continue
 ```
 
-- Interrupt `Ctrl+Break`
-- Strong Interrupt 
 - While 
     
     ```APL
@@ -333,23 +317,7 @@ https://nbviewer.jupyter.org/github/rikedyp/LearnAPL/blob/master/Tutorials/Marki
           :AndIf OnlyComputableIfPreCondition
     ```
 
-## Files & IO
-
-#### Learning Objectives
-1. Know how to using `⎕` and `⍞` for input.
-How to read input and write output, both in the session and on the file system
-
-#### New constructs
-
-```APL
-      ⎕ ⍞ {//⎕VFI⍵}
-      ⎕←
-      ⎕CSV ⎕JSON ⎕XML
-      ⎕NGET ⎕NPUT
-      ⎕F...
-```
-
-## Errors
+## 13: Errors
 
 #### Learning Objectives
 1. Know the causes of common error messages
@@ -371,7 +339,25 @@ How to read input and write output, both in the session and on the file system
 
 - System functions & commands cheat sheet
 
-## Handling Data
+# Day 3
+
+## 14: Files & IO
+
+#### Learning Objectives
+1. Know how to using `⎕` and `⍞` for input.
+How to read input and write output, both in the session and on the file system
+
+#### New constructs
+
+```APL
+      ⎕ ⍞ {//⎕VFI⍵}
+      ⎕←
+      ⎕CSV ⎕JSON ⎕XML
+      ⎕NGET ⎕NPUT
+      ⎕F...
+```
+
+## 15: Handling Data
 Practise using existing knowledge, as well as some new constructs, in tasks which involve handling "real" data (some of it may be from real sources, some may be created specifically to demonstrate a primitive or technique).
 
 #### To do
@@ -401,7 +387,7 @@ IRL data e.g. https://www.kaggle.com/sudalairajkumar/daily-temperature-of-major-
         - Rotate
         - Transpose
 
-## Out in the Wild
+## 16: Out in the Wild
 Constructs which exist in older APL code but are considered problematic. Users will need to know what they mean, and may be required to use them to maintain the style of an existing code base.
 
 - GoTo, ppt 4, slide 105
@@ -409,8 +395,7 @@ Constructs which exist in older APL code but are considered problematic. Users w
 ```APL
       →Condition/⎕LC
       →⍬
-      :GoTo Label:
-      (strand assignment) ← value1 value2
+      :GoTo Label:      
 ```
 
 - ⎕PATH can be used to set a relative search space, in addition to ⎕THIS
@@ -424,7 +409,7 @@ Constructs which exist in older APL code but are considered problematic. Users w
 - APL Orchard
 - APLCart
 
-## Final Project
+## 17: Final Project
 Longer form practise project where students apply knowledge and use resources to build small applications
 
 # Optional Extras
@@ -432,6 +417,14 @@ Longer form practise project where students apply knowledge and use resources to
 These modules may be linked to form parts of the main course, intended for use if certain students complete sections very quickly. Of course, having students teach others, thereby reinforcing their own learning, is very beneficial as well.
 
 ## The Inner Product
+
+```APL
+      +.×
+      +.-
+      ∨.∧
+      ∧.∧
+      ∧.=
+```
 
 ## Array & Interpreter Internals
 
@@ -444,7 +437,30 @@ These modules may be linked to form parts of the main course, intended for use i
 ```
 
 ## Notes on Performance
+Once upon a time there were only simple, flat arrays. Flat arrays are simpler and faster than nested arrays. While the ability to enclose data and use arrays of arrays leads to more problem solving possibilities, flat array techniques and exploiting
+
+      life
+{                                        ⍝ John Conway's "Game of Life".  
+     ↑1 ⍵∨.∧3 4=+/,¯1 0 1∘.⊖¯1 0 1∘.⌽⊂⍵  ⍝ Expression for next generation.
+ }  
+
+      ]runtime -c "(,/⍪⌿)data" "⊂4 4⍴1 3 2 4⍉↑data" 
+                                                                              
+  (,/⍪⌿)data         → 3.7E¯6 |   0% ⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕ 
+  ⊂4 4⍴1 3 2 4⍉↑data → 7.2E¯7 | -81% ⎕⎕⎕⎕⎕⎕⎕⎕  
 
 ### Dyadic Transpose
 I've heard at least one person say that mastery of dyadic `⍉` transpose is mastery of array programming.
-Reshape and rearrange a vector of monthly sales data to do convenient summaries with `⌿⍤`.
+
+n1←3 2 3 ⍴3/11 12 23 24 35 36   ⍝ 10s, 20s, 30s
+2 1 3⍉n                         ⍝ Odds, evens
+
+n2←3 2⍴11 12 23 24 35 36        ⍝ 10s, 20s, 30s
+⍉n                              ⍝ Odds, evens
+
+data←2 2⍴0 4 8 12+⊂2 2⍴⍳4
+Merge data into
+⊂4 4⍴1 2 5 6 3 4 7 8 9 10 13 14 11 12 15 16
+
+(,/⍪⌿)data
+⊂4 4⍴1 3 2 4⍉↑data
