@@ -1,7 +1,7 @@
 ---
 layout: workshop
 title: The Array Model
-back: /
+back: /course/day1/6.md
 next: /
 ---
 
@@ -31,7 +31,7 @@ UVWX
 2
 ```
 
-The dimensions of an array are also known as **axes**. The most major cells, the rank `k-1` for an array of rank `k`, lie along the *first* axis. The least major cells are columns which lie along the *last* axis.
+The dimensions of an array are also known as **axes**. The most major cells, of rank `k-1` for an array of rank `k`, lie along the *first* axis. The least major cells are scalars which lie along the *last* axis to form columns.
 
 Cells of rank
 

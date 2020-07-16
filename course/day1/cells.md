@@ -1,8 +1,8 @@
 ---
 layout: workshop
 title: Cells and Rank
-back: /course/day1/4
-next: /course/todo
+back: /course/day1/5
+next: /course/day1/7
 ---
 
 ### Cells
@@ -20,23 +20,39 @@ Experiment with the following examples. Describe each one and then describe the 
       pos←?5 3⍴0
       (+⌿÷≢)pos(×⍤2 0)mass
       ×⍤0⍤0 2⍨⍳10
-      -⍤1⍤1 99⍨pos
+      -⍤1⍤1 99⍨pos      
 ```
 
-{% include hint.html id="arrayModel" content="If you feel stuck, check out <a target=_blank href='/course/day1/arraymodel'>The Array Model</a>." %}
+{% include hint.html id="arrayModel" content="If you feel stuck, check out <a target='_blank' href='/course/day1/arraymodel'>The Array Model</a>." %}
 
 ### Rank 
 
-Which of the following functions are affected by the rank operator, and which are not?
+Which of the following functions are affected by the rank operator, and why are the other functions not affected?
 
 ```APL
 ⊖ ⌽
 ⌿ /
 ```
 
-# Problems n: Cells & Rank
-1. Match the following rank operands with their descriptions. Each use of rank pairs with two of the 10 description boxes below.
+### The Shape of the Result
+Without executing them, determine the shape of the results of the following expressions.
 
+```APL
+      
+```
+
+# Problems n: Cells & Rank
+1. 
+```APL
+      a←6↑⎕A      
+      a,a
+      a⍪a
+      alph(⍪⍤2)alph
+      1(↑⍤1)alph
+      ¯2(↑⍤2)alph
+```
+
+1. Match the following rank operands with their descriptions. Each use of rank pairs with two of the 10 description boxes below.    
 
     `⍤1 3`
 
@@ -82,6 +98,7 @@ Which of the following functions are affected by the rank operator, and which ar
     │2D array│                    │
     └────────┴────────────────────┘
     ```
+  
 
 ### Cells and Axes
 
