@@ -6,7 +6,14 @@ next: /
 ---
 
 # Main Course
-Write sessions according to [the plan]({{site.baseurl}}/-course/plan).
+1. Write main sessions according to [the plan]({{site.baseurl}}/-course/plan).
+1. ]box on when nested arrays first appear
+1. Devise better numbering scheme for problems / sections
+    Day n, section j, problem k
+    n.j.k
+1. Edit / [Freddify](https://www.theatlantic.com/family/archive/2018/06/mr-rogers-neighborhood-talking-to-kids/562352/) (probably do not make entirely Freddish)
+    Perhaps have a native version with a bit more fruity style on personal site, and an official version which is more straightforward and probably better for e.g. someone with English as a second language.
+1. Test / review
 
 # Extra Modules
 Further content may be provided as workshop modules or as [Jupyter notebooks](https://github.com/rikedyp/LearnAPL).

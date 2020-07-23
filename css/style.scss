@@ -69,19 +69,22 @@ table tbody tr td {
     border: solid;
     padding: 0.3em;
 }
-  
+
+pre {margin: 0.5vh 3vw 3vh 3vw;}
+
 pre, code {    
     background: #3C4F76;
     color: white;
-    padding: 0.3em 0.7em 0.3em 0.7em;
+    padding: 0.3em 0.7em 0.3em 0.7em;    
     overflow: auto;    
     border-radius: 0.7em;
     font-family: "APL385";
     line-height: 1.2em;
+    white-space: pre;    
 }
 
 pre > * {padding: 0;}
 pre > * > * {padding: 0;}
-pre {margin: 0 3vw;}
+pre {margin: 0.5vh 3vw;}
 
 .language-APL {font-family: APL385;}
