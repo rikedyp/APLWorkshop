@@ -20,6 +20,7 @@ The APL Workshop course is developed using Jekyll, since it has native GitHub Pa
 `bundle install && ./serve.sh`
 
 The `serve.sh` help script has the following options:
-	* `-h`: Define a host, defaults to `0.0.0.0`.
-	* `-p`: Define a port, defaults to `4000`.
+
+* `-h`: Define a host, defaults to `0.0.0.0`.
+* `-p`: Define a port, defaults to `4000`.
 
