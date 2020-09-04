@@ -19,6 +19,7 @@ next: /
 To do: distinguish between internal / external links
 
 ### Themes
+- A balance between *what things do* and *how to do things*
 - Modern APL techniques from day-1
     - First-axis theory
     - Cells & Rank

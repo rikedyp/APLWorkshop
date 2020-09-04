@@ -1,8 +1,8 @@
 ---
 layout: workshop
 title: Selecting from Arrays
-back: /course/day1/7
-next: /course/day1/8
+back: /course/7
+next: /course/8
 ---
 
     ```APL        

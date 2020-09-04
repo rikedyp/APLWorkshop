@@ -1,8 +1,8 @@
 ---
 layout: workshop
 title: Tools and Interfaces
-back: /course/day2/1
-next: /course/day2/2
+back: /course/9
+next: /course/10
 ---
 
 Here we highlight some particularly useful settings, menu items and tools in Dyalog.
@@ -31,13 +31,14 @@ was -fold=off
       ⍪⍳100
 ```
 
-🔧 1 2 3
+🛠 Use `⎕SE.Dyalog.Utils.repObj myArray` to generate an expression for (almost) any given array. 
 
-### Dyalog for Microsoft Windows
-For historical reasons, the Windows [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) is somewhat more mature and feature-filled than the default environment.
+🛠 use `Ctrl+Enter` to step through a multi-line function line-by-line.
 
-- Copy/Paste Object
-- Fix function kbd shortcut
+🛠 Use `Shift+Enter` to edit a suspended function. This is also a shortcut for `)ED Function`.
 
-### RIDE
-The [Remote Integrated Development Environment](https://github.com/Dyalog/ride) is an IDE for Dyalog which runs on Microsoft Windows, macOS and Linux (including Raspberry Pi).
+🛠 While in the editor, use the [numpad](https://en.wikipedia.org/wiki/Numeric_keypad) *forward-slash* `/` key to align code.
+
+🛠 Use `Ctrl+Shift+Backspace` and `Ctrl+Shift+Enter` to scroll backward and forwards in your input history. They can also be used as *Undo* and *redo* in the editor. 
+
+🛠 Press `Esc` to close the editor and fix the function.

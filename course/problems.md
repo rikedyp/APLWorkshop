@@ -7,6 +7,16 @@ next: /
 
 # Problems
 
+## To Write
+- Words which only contain these chars
+
+- Palindrome numbers {⍵⌿⍨(⊢≡⌽)¨⍎¨¨⍕¨⍵}⍳1000
+
+- Audio challenge
+    RIFF WAVEfmt
+    FFT chord finder
+    Filter?
+
 ## Rotate & Transpose
 1. Given a multiplication table generated with ∘.×⍨N, write an expression to find N
 
@@ -112,7 +122,7 @@ Requires
 Find the largest palindrome made from the product of two 3-digit numbers.
 
 ### Special Pythagorean Triplet
-find a b c for which (a*2)+(b*2)+(c*2)=1000
+find a b c for which (a\*2)+(b\*2)+(c\*2)=1000
 
 ### Polynomial
 

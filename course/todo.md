@@ -7,10 +7,22 @@ next: /
 
 # Main Course
 1. Write main sessions according to [the plan]({{site.baseurl}}/-course/plan).
+  1. Array Model
+  1. Where is the term *stranding* first used?
+  1. Session 2.1 is windowed reduction ever introduced?
+  1. Rank operator - include training wheels function `⊂` and `{⍺⍵}` ,⍥⊂.  
+  1. Style links ⠿⠇
+1. Is it important to always have tasks/problems at the end of each section, or interspersed with related instruction?
+1. Why is `(6⍴'⍥⎕')@1 2⊢2 3⍴'DYALOG'` a LENGTH ERROR if `(2 3⍴'⍥⎕')@1 2⊢2 3⍴'DYALOG'` is valid? Shape error?
+1. Possible split 9: Going Deeper into two sections (10: Going around and around?)
+1. User-facing course outline with links to each section[]
+1. Answer pages
+1. Replace hints with HTML details / summary tags
+1. References to primitive functions should refer to arguments e.g. *shape* `⍴X` suggests monadic application
 1. ]box on when nested arrays first appear
-1. Devise better numbering scheme for problems / sections
-    Day n, section j, problem k
-    n.j.k
+1. Implement better numbering scheme for problems / sections
+    section k, problem j, problem k.j
+1. Perhaps 13/Help I'm Trapped can be more businessey and text-based?
 1. Edit / [Freddify](https://www.theatlantic.com/family/archive/2018/06/mr-rogers-neighborhood-talking-to-kids/562352/) (probably do not make entirely Freddish)
     Perhaps have a native version with a bit more fruity style on personal site, and an official version which is more straightforward and probably better for e.g. someone with English as a second language.
 1. Test / review
@@ -395,8 +407,36 @@ ppt 7 slide 35...
 - APL Problem Solving Competition
 - MK ppt
 
+1. The Shape of the Result  
+    Without executing in an interpreter, evaluate the following expressions as if they were executed in order. Afterwards, use an interpreter to check your results.
+
+```APL
+      ⍴'new' 'old'∘., apple' ' pear' ∘., ' cider' ' pie' ' tree'
+      ⍴(2 2⍴⍳4)∘.÷1 10 100 1000
+      ⍴¯50 50∘.+1 10 100∘.×¯1 1
+      ≢⍴0 1∘.+2 3∘.-4∘.×5 6∘.÷7 8
+      a←1 2 1
+      ⍴⍬
+      ⍴''
+      ⍴⍬,⍬
+      ⍴⍪⍪⍳2
+      3⍪⍪⍳2
+      ⍴,⍪⍳8
+      b←2 3 4 1
+      ⍴a,b
+      c←1 5 3 4 1 5
+      ⍴,b∘.+c
+      ⍴b[b]
+      B←6⌊c∘.+c
+      ⍴B[a;c]
+      C←b∘.×B
+      ⍴C[;2;]
+      ⍴C[a;;b]
+```   
+
 Tutorial
 --------
 
 Handout
 -------
+
