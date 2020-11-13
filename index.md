@@ -17,4 +17,9 @@ You will need access to [an APL interpreter](https://aplwiki.com/wiki/Running_AP
 
 # [Start now!]({{ site.baseurl }}/course/1)
 
+<br>
+
+### Feedback
+If you have suggestions, criticisms or praise, please [create an issue on GitHub](https://github.com/rikedyp/APLWorkshop/issues/new?assignees=rikedyp&labels=&template=feedback.md&title=).
+
 </div>
