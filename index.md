@@ -9,7 +9,8 @@ layout: home
 
 This course consists of a series of short instructional notes interleaved with problem sets. The first few sessions are accompanied by video tutorials.
 
-{% include note.html content="<b>DEPRECATION NOTICE</b>: The contents of this course is being migrated to <a href="https://course.dyalog.com">course.dyalog.com</a> while being reviewed and updated. Eventually this page will redirect there, and links to specific pages will no longer work." %}
+## Deprecation Notice
+The contents of this course is being migrated to <a href="https://course.dyalog.com">course.dyalog.com</a> while being reviewed and updated. Eventually this page will redirect there, and links to specific pages will no longer work.
 
 ### Getting Started
 
